@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int ar1[3],ar2[3];
+    for(int i=0;i<3;i++){
+        cin>>ar1[i];
+    }
+    for(int i=0;i<3;i++){
+        cin>>ar2[i];
+    }
+     int ap=0,bp=0;
+    int A[2];
+    for(int i=0;i<3;i++){
+        if(ar1[i]>ar2[i])
+            ap++;
+         else if(ar1[i]<ar2[i])
+            bp++;
+    }
+    A[0]=ap;
+    A[1]=bp;
+    for(int i=0;i<2;i++){
+        cout<<A[i]<<" ";
+    }
+}
