@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int A[n];
+    int p=0,ne=0,z=0;
+    for(int i=0;i<n;i++){
+        cin>>A[i];
+    }
+    for(int i=0;i<n;i++){
+        if(A[i]>0)
+        p++;
+        else if(A[i]<0)
+        ne++;
+        else 
+        z++;
+    }
+    float pp=(float)p/n;
+    float nn=(float)ne/n;
+    float zz=(float)z/n;
+    cout<<pp<<endl<<nn<<endl<<zz<<endl;
+    
+}
