@@ -1,0 +1,26 @@
+string balancedSums(vector<int> arr) {
+     int tsum=0,s1=0,rs;
+        bool b= false;
+        int l=sizeof(arr)/sizeof(arr[0]);
+        for(int i=0;i<l;i++){
+            tsum=tsum+arr[i];
+        }
+        
+        for(int i=0;i<l;i++){
+                if(i==0)
+                    s1=0;
+                else 
+                    (s1=s1+arr[i-1]);
+                rs=tsum-(s1+arr[i]);
+                if(s1==rs){
+                    return "YES";
+                    b=true;
+                    break;
+                }
+                
+            
+        }
+       if(b==false)
+           return "NO";
+      return "not found";     
+}
